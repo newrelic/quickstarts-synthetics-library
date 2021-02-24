@@ -1,9 +1,7 @@
 # Name of your quickstart as shown on the website
-name: Add the name of your quickstart
+name: SMTP
 description: >
-  Describe what's the focus of your synthetic script.
-  You can use multiple lines.
-  Try to be as descriptive as possible.
+  Use the nodemailer module to send an email. This example uses Gmail and an Gmail application password stored in a Secure Credential.
 
 # Type of synthetic quickstart
 # - Template (Default): Full example that users can copy paste to use
@@ -13,9 +11,8 @@ type: Template
 # Type of synthetic monitor
 # Scripted Browser = SCRIPT_BROWSER
 # Scripted API = SCRIPT_API
-monitorType: 
+monitorType: SCRIPT_API
 
 # Optional: Authors of the quickstart
 authors:
-    - Samuel V.
-    - Stijn P.
+    - Brian P.
