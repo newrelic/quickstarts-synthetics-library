@@ -1,0 +1,20 @@
+# Name of your quickstart as shown on the website
+name: DaylightSavingsTimestamps
+description: >
+  Dates in Synthetics are based on UTC by default, but sometimes you have a requirement for a timezone based date. Daylight Savings makes this more challenging. 
+  This snippet creates a Date object using a variable offset based on whether or not US based Daylight Savings is active.
+  This script was created for Eastern Standard Time / Eastern Daylight Time. Adjust the offsets in getOffset for other time zones.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Snippet
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_API
+
+# Optional: Authors of the quickstart
+authors:
+    - Paul B.
