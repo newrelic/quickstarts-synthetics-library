@@ -1,9 +1,8 @@
 # Name of your quickstart as shown on the website
-name: Add the name of your quickstart
+name: FTP
 description: >
-  Describe what's the focus of your synthetic script.
-  You can use multiple lines.
-  Try to be as descriptive as possible.
+  Use the basic-ftp module to connect to a FTP server using a password stored in a Secure Credential,
+  list the current directory contents, and close the connection. This can be extended to upload/download files, etc.
 
 # Type of synthetic quickstart
 # - Template (Default): Full example that users can copy paste to use
@@ -13,9 +12,8 @@ type: Template
 # Type of synthetic monitor
 # Scripted Browser = SCRIPT_BROWSER
 # Scripted API = SCRIPT_API
-monitorType: 
+monitorType: SCRIPT_API
 
 # Optional: Authors of the quickstart
 authors:
-    - Samuel V.
-    - Stijn P.
+    - Brian P.
