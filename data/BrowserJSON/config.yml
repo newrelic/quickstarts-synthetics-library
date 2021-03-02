@@ -1,0 +1,19 @@
+# Name of your quickstart as shown on the website
+name: BrowserJSON
+description: >
+  How to find the element associated with JSON in a scripted browser monitor and parse the JSON.
+  Although this is a complete script, typically this would be used as a snippet or portion of a larger monitor instead.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Snippet
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_BROWSER
+
+# Optional: Authors of the quickstart
+authors:
+    - Brian P.

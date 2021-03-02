@@ -1,0 +1,21 @@
+# Name of your quickstart as shown on the website
+name: Add the name of your quickstart
+description: >
+  Describe what's the focus of your synthetic script.
+  You can use multiple lines.
+  Try to be as descriptive as possible.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Template
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: 
+
+# Optional: Authors of the quickstart
+authors:
+    - Samuel V.
+    - Stijn P.

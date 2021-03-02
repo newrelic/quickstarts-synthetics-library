@@ -1,0 +1,20 @@
+# Name of your quickstart as shown on the website
+name: QueryEventAPI
+description: >
+  Query the New Relic Event API during script execution. This example uses $util.insights.set to store a value from one monitor execution 
+  that will be queried and used in future monitor executions. An Insights query key (https://docs.newrelic.com/docs/apis/get-started/intro-apis/new-relic-api-keys#insights-query-key)
+  was created and stored in a Secure Credential to query the Event API. This could be used in a scripted browser or scripted API monitor.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Snippet
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_API
+
+# Optional: Authors of the quickstart
+authors:
+    - Brian P.

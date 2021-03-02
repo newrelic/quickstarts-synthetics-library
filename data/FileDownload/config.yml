@@ -1,0 +1,18 @@
+# Name of your quickstart as shown on the website
+name: FileDownload
+description: >
+  Download a file and measure the time it takes to complete.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Template
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_BROWSER
+
+# Optional: Authors of the quickstart
+authors:
+    - Keagan P.

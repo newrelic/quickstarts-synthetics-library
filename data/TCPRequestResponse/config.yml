@@ -1,0 +1,20 @@
+# Name of your quickstart as shown on the website
+name: TCPRequestResponse
+description: >
+  Connect to a non-SSL TCP port and simulate a HTTP GET. HTTP is not required and just used as an example.
+  Use TCPPortCheck if the client does not need to write to the connection.
+  Use TCPSecureRequestResponse if a secure port is required.
+
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Template
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_API
+
+# Optional: Authors of the quickstart
+authors:
+    - Brian P.

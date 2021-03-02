@@ -1,0 +1,20 @@
+# Name of your quickstart as shown on the website
+name: 2FAOrMFA
+description: >
+  Use the speakeasy node module to create a time based one time password for Google Authenticator and Okta based 2FA/MFA. 
+  This module is not available in the Synthetics runtime environment and requires use of a containerized private minion with a custom npm module configuration:
+  https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/containerized-private-minion-cpm-configuration#custom-modules
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Snippet
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_BROWSER
+
+# Optional: Authors of the quickstart
+authors:
+    - Brian P.
