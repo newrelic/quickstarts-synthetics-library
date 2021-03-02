@@ -1,0 +1,30 @@
+name: Check pull requests
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  website:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
+    - name: Install libraries
+      run: npm install
+
+    - name: Lint check
+      run: npm run eslint-check
+
+    - name: Build data file
+      run: npm run generator
+
+    - name: Build website
+      run: npm run build
