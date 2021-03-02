@@ -1,0 +1,55 @@
+{
+  "name": "quickstarts-synthetics-library",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://newrelic.github.io/quickstarts-synthetics-library",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "bootstrap": "^4.6.0",
+    "js-yaml": "^3.14.0",
+    "node-sass": "^4.14.1",
+    "nr1-bootstrap-theme": "git+https://github.com/newrelic/nr1-bootstrap-theme.git",
+    "prop-types": "^15.6.2",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.14.0",
+    "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "winston": "^3.3.3"
+  },
+  "nr1": {
+    "uuid": "dcaa3623-1e1c-41a3-a1d9-994499f4b66d"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "generator": "cd generator && ./generate-data.sh",
+    "eslint-check": "eslint src/ generator/",
+    "eslint-fix": "eslint src/ generator/ --fix"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "@newrelic/eslint-plugin-newrelic": "^0.3.1",
+    "prettier": "^2.2.1"
+  }
+}
