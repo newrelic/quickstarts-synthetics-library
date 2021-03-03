@@ -36,7 +36,15 @@ class Home extends React.Component {
           <div className="container">
             <h1>New Relic - Quickstart synthetics library</h1>
             <p className="lead text-muted">
-              Library of curated synthetic scripts to use in New Relic Synthetics.
+              Library of curated synthetic scripts to use in{' '}
+              <a
+                href="https://docs.newrelic.com/docs/synthetics"
+                target="_BLANK"
+                rel="noopener noreferrer"
+              >
+                New Relic Synthetics
+              </a>
+              .
             </p>
           </div>
 
