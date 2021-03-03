@@ -14,7 +14,7 @@ class View extends React.Component {
       ),
       path: props.match.path,
       loading: true,
-      scriptUrl: '',
+      githubUrl: '',
       script: '',
       copyText: View.copyTextDefault,
     };
@@ -39,18 +39,19 @@ class View extends React.Component {
   }
 
   componentDidMount() {
-    this.loadScript(
-      `${config.URL_DATA_FOLDER}/${this.state.quickstart.id}/script.js`
-    );
+    this.loadScript();
   }
 
   static copyTextDefault = 'Copy to clipboard';
 
-  loadScript(url) {
-    this.setState({
+  loadScript() {
+    this.setState((prevState) => ({
+      ...prevState,
       loading: true,
-    });
-    fetch(url)
+      githubUrl: `${config.URL_GITHUB_LIBRARY}/${prevState.quickstart.id}/script.js`,
+      githubIssue: `${config.URL_GITHUB_ISSUE}?labels=bug&title=Problem%20with%20${prevState.quickstart.id}`,
+    }));
+    fetch(`${config.URL_DATA_FOLDER}/${this.state.quickstart.id}/script.js`)
       .then((response) => response.text())
       .then((response) => {
         this.setState({
@@ -132,14 +133,36 @@ class View extends React.Component {
               )}
               {!this.state.loading && (
                 <>
-                  <CopyToClipboard
-                    text={this.state.script}
-                    onCopy={this.copySuccess}
-                  >
-                    <button className="btn btn-default" type="button">
-                      {this.state.copyText}
-                    </button>
-                  </CopyToClipboard>
+                  <div className="row">
+                    <div className="col-6">
+                      <CopyToClipboard
+                        text={this.state.script}
+                        onCopy={this.copySuccess}
+                      >
+                        <button className="btn btn-link" type="button">
+                          {this.state.copyText}
+                        </button>
+                      </CopyToClipboard>
+                    </div>
+                    <div className="col-6 text-right">
+                      <a
+                        href={this.state.githubUrl}
+                        target="_BLANK"
+                        rel="noopener noreferrer"
+                        className="btn btn-link"
+                      >
+                        Source code
+                      </a>
+                      <a
+                        href={this.state.githubIssue}
+                        target="_BLANK"
+                        rel="noopener noreferrer"
+                        className="btn btn-link"
+                      >
+                        Report an issue
+                      </a>
+                    </div>
+                  </div>
                   <SyntaxHighlighter language="javascript" style={docco}>
                     {this.state.script}
                   </SyntaxHighlighter>

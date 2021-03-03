@@ -5,4 +5,7 @@ if (ENV === 'development') {
 }
 
 export const URL_DATA_FOLDER = `${URL_ROOT}/data`;
-export const URL_DATA_FILE = `${URL_ROOT}/data.json`;
+export const URL_DATA_FILE = `/data.json`;
+export const URL_GITHUB = `https://github.com/newrelic/quickstarts-synthetics-library`;
+export const URL_GITHUB_LIBRARY = `${URL_GITHUB}/tree/main/library`;
+export const URL_GITHUB_ISSUE = `${URL_GITHUB}/issues/new`;
