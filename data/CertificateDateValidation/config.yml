@@ -1,0 +1,19 @@
+name: CertificateDateValidation
+description: >
+  The synthetic script can be used to validate an SSL or TLS certificate's date. When configured,
+  the script will call a URL endpoint and get the Peer Certificate. The certificate can then be
+  analyzed for its expiration date and compared with an offset of a specified amount of days to
+  trigger a check failure to ensure than the endpoints get updated when required.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Template
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_API
+
+authors:
+    - Brian Rogers
