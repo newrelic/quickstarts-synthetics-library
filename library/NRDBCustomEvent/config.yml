@@ -1,0 +1,18 @@
+# Name of your quickstart as shown on the website
+name: NRDBCustomEvent
+description: >
+  Have you always wanted to send custom data about your Synthetic Monitor to NRDB? Now you can. Create your JSON payload and use zlib.gzip to prepare the payload body.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Snippet
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_BROWSER
+
+# Optional: Authors of the quickstart
+authors:
+    - Stacy S.
