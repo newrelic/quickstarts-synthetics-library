@@ -4,6 +4,8 @@ object-assign
 @license MIT
 */
 
+/*! For license information please see index.js.LICENSE.txt */
+
 /** @license React v0.19.1
  * scheduler.production.min.js
  *
