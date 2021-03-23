@@ -1,0 +1,30 @@
+# Name of your quickstart as shown on the website
+name: Google PageSpeed Insights - Lighthouse
+description: >
+  Gets a Google Lighthouse Audit report using the PageSpeed
+  Insights API and stores the results, for analysis. Use cases
+  include comparing this data with Real User Monitoring (RUM)
+  data, monitoring Core Web Vitals and Lighthouse scores.
+  You need to create a secure credential called PAGESPEED_INSIGHTS_API_KEY.
+  More info on that here: https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/using-monitors/store-secure-credentials-scripted-browsers-api-tests/
+
+  You can get a PageSpeed Insights API key from Google here:
+    https://developers.google.com/speed/docs/insights/v5/get-started
+
+  You will also need to replace the URL to the page you want to check.
+  Current it is checking google.com by default.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Template
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_API
+
+# Optional: Authors of the quickstart
+authors:
+    - Dan Perovich
+    - Daniel Fitzgerald
