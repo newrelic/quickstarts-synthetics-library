@@ -9,8 +9,13 @@ module.exports = {
         'plugin:@newrelic/eslint-plugin-newrelic/prettier'
     ],
     "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
+        "$util": "readonly",
+        "$http": "readonly",
+        "$driver": "readonly",
+        "$browser": "readonly",
+        "$env": "readonly",
+        "$secure": "readonly",
+        "previousAction": "readonly"
     },
     "parser": "babel-eslint",
     "parserOptions": {
@@ -21,11 +26,11 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react",
         "prettier"
     ],
     "rules": {
         "prettier/prettier": "error",
         "no-console": "off",
+        "no-unused-vars": ["error", { "varsIgnorePattern": "ScriptTimeout|DefaultTimeout|UserAgent" }]
     }
 };

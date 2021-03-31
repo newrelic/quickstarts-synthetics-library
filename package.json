@@ -32,8 +32,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "generator": "cd generator && ./generate-data.sh",
-    "eslint-check": "eslint src/ generator/",
-    "eslint-fix": "eslint src/ generator/ --fix"
+    "eslint-check": "eslint src/ generator/ library/",
+    "eslint-fix": "eslint src/ generator/ library/ --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
