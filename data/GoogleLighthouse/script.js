@@ -18,6 +18,7 @@ $http(options, function (error, response, body) {
       var lighthouseMetrics = body.lighthouseResult.audits.metrics.details.items[0];
       $util.insights.set('url', settings.url);
       $util.insights.set('deviceType', settings.strategy);
+      $util.insights.set('performanceScore', body.lighthouseResult.categories.performance.score);
       
       for (var attributeName in lighthouseMetrics) {
         if ( lighthouseMetrics.hasOwnProperty(attributeName) ) {
