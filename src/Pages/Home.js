@@ -34,7 +34,7 @@ class Home extends React.Component {
       <div>
         <section className="jumbotron text-center">
           <div className="container">
-            <h1>New Relic - Quickstart synthetics library</h1>
+            <h1>New Relic - Quickstarts Synthetic Monitoring Library</h1>
             <p className="lead text-muted">
               Library of curated synthetic scripts to use in{' '}
               <a
