@@ -1,0 +1,20 @@
+# Name of your quickstart as shown on the website
+name: NRQLCompareWith
+description: >
+  Execute a NRQL query through NerdGraph to compare results over a period in time. The script will fail if the current result decreases from the previous result more than a given threshold (thresPercent). 
+  The query and comparison windows are defined as variables to make adjustments easier.
+  The query result logic in the callback function may need adjusted if NRQL functions other than count are used.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Template
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_API
+
+# Optional: Authors of the quickstart
+authors:
+    - Brian P.

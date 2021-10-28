@@ -1,0 +1,19 @@
+# Name of your quickstart as shown on the website
+name: GCPServiceAccountOAUTH
+description: >
+  Interact with GCP APIs using a service account and JWT authorization (https://developers.google.com/identity/protocols/oauth2/service-account#httprest)
+  This simple example uses the App Engine API to retrieve information about an application. The scope and API endpoints can be adjusted to interact with other GCP APIs.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Template
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_API
+
+# Optional: Authors of the quickstart
+authors:
+    - Brian P.
