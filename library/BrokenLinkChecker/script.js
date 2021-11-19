@@ -6,6 +6,11 @@ const By = $driver.By;
 // Replace with the URL you want to check for broken links
 const urlToCheck = 'https://www.example.com/';
 
+const domainsToIgnore = [
+  'www.instagram.com',
+  'www.linkedin.com'
+];
+
 $browser.get(urlToCheck)
   .then(function() {
     // find all 'a' elements
@@ -23,7 +28,7 @@ $browser.get(urlToCheck)
             if (!href.startsWith('mailto') && !href.startsWith('tel')) {
               var domain = parse(href).hostname;
               // if target is not in list of excluded domains...
-              if (domain != 'www.instagram.com' && domain != 'www.linkedin.com') {
+              if (!domainsToIgnore.includes(domain)) {
                 // send HEAD request and check response
                 return $http.head(href, callback);
               }
