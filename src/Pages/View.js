@@ -118,7 +118,7 @@ class View extends React.Component {
             <div className="col-4 text-right pt-1">
               <a
                 className="btn btn-primary"
-                href="https://one.newrelic.com/launcher/synthetics-nerdlets.home?pane=eyJuZXJkbGV0SWQiOiJzeW50aGV0aWNzLW5lcmRsZXRzLm1vbml0b3ItY3JlYXRlIiwiYWNjb3VudElkIjo4NDY3MjN9&platform[timeRange][duration]=1800000&platform[$isFallbackTimeRange]=true"
+                href="https://one.newrelic.com/synthetics-nerdlets/monitor-create"
                 target="_BLANK"
                 rel="noopener noreferrer"
               >
