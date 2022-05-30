@@ -83,9 +83,6 @@ var listOfProviders = [
  * Script, don't change anything if you don't know what you're doing!
  */
 
-// We do a call to New Relic to generate some traffic, otherwise the synthetics check will fail
-$http.get("https://www.newrelic.com");
-
 // Helper function to check if an IP is registered with a spam provider
 function check(ip, provider) {
     var reversed = ip.split('.').reverse().join('.');
