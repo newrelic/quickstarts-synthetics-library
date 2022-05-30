@@ -1,0 +1,18 @@
+# Name of your quickstart as shown on the website
+name: Blocklist
+description: >
+  Script to check the presence of a list of IP addresses against a set of email blocklists. The script will fail if any IP address is found in one of the lists.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Template
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_API
+
+# Optional: Authors of the quickstart
+authors:
+  - Samuel Vandamme
