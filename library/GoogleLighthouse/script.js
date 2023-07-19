@@ -12,7 +12,7 @@ const options = {
 };
 
 try {
-	const response = $http(options);
+  const response = $http(options);
   if (response.statusCode == 200) {
     const lighthouseMetrics = response.body.lighthouseResult.audits.metrics.details.items[0];
     $util.insights.set('url', settings.url);
