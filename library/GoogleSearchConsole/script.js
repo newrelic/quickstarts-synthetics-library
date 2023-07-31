@@ -254,11 +254,7 @@ async function postMetrics(body) {
  */
 async function main() {
   let jwt = await getJwt();
-  console.log('JWT:', jwt)
-
   let token = await getToken(jwt);
-  console.log('token:', token);
-
   await querySearchConsole(token);
 }
 
