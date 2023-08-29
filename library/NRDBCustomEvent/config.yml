@@ -11,7 +11,7 @@ type: Snippet
 # Type of synthetic monitor
 # Scripted Browser = SCRIPT_BROWSER
 # Scripted API = SCRIPT_API
-monitorType: SCRIPT_BROWSER
+monitorType: SCRIPT_API
 
 # Optional: Authors of the quickstart
 authors:
