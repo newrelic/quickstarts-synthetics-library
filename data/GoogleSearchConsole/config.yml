@@ -1,0 +1,36 @@
+# Name of your quickstart as shown on the website
+name: Google Search Console API
+description: >
+  Query Google Search Console analytics from the Google Search
+  Console API and ingest to New Relic. Use cases include:
+  - seeing where your site ranks when users search Google for a specific term
+  - seeing the impressions, clicks, position, and click-through rate for pages
+  You will need two secure credentials:
+  - GSC_INSERT_LICENSE_API_KEY, a New Relic ingest license key
+  - GCP_SERVICEACCOUNT_KEY, the private key of a Google Service Account with
+    read/restricted access 
+  From Google, you will also require:
+  - Appropriate access to the property (site/domain) in Google Search Console
+    (https://search.google.com/search-console/)
+  - A Google Cloud project, created in the Google Developer Console
+    (https://console.developers.google.com/)
+  - Google Search Console API must be enabled for the project
+    (https://cloud.google.com/endpoints/docs/openapi/enable-api)
+  - A service account for Authentication, as detailed in the GoogleServiceAccountOUATH
+    quickstart
+    (https://developers.google.com/identity/protocols/oauth2/service-account#httprest)
+    Alternatively you can use OAuth 2.0 Client IDs, not included in the example script
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Template
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_API
+
+# Optional: Authors of the quickstart
+authors:
+    - Craig S.
