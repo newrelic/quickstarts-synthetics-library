@@ -5,3 +5,6 @@ node_modules/
 build/
 public/data
 public/data.json
+
+# why macos, why!?!
+.DS_Store
