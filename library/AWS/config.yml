@@ -1,0 +1,21 @@
+# Name of your quickstart as shown on the website
+name: Check s3 Object
+description: >
+  Boilerplate script that checks the size of an Object in s3 against a given value.
+  This can be expanded to verify any metadata of an s3 object and with a little work the file structure of the object etc.
+  Veryuseful in ETL pipelines.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Template
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_API
+
+# Optional: Authors of the quickstart
+authors:
+    - Adam M
+    - Steve C
