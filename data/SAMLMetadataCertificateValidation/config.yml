@@ -1,0 +1,22 @@
+# Name of your quickstart as shown on the website
+name: SAML Metadata Certificate Validation
+description: >
+  A script to validate the X509 Certificate data in SAML metadata and confirm that it is not expiring soon.
+  The SAML Metadata structure allows some variance in field names and namespaces, so this script strips namespaces and attempts to find a list of entities in either location.
+  SAML Metadata requirements are documented here: https://www.oasis-open.org/committees/download.php/56785/sstc-saml-metadata-errata-2.0-wd-05.pdf
+  This script uses parts of the Cert Check script found here: https://forum.newrelic.com/s/hubtopic/aAX8W0000008ZtLWAU/relic-solution-monitoring-ssl-certificate-expiration
+  Requires a target URL.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Template
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPTED_API
+
+# Optional: Authors of the quickstart
+authors:
+  - Shevaun F.

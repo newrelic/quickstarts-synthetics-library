@@ -1,12 +1,14 @@
 # Name of your quickstart as shown on the website
-name: NRDBCustomEvent
+name: Check s3 Object
 description: >
-  Have you always wanted to send custom data about your Synthetic Monitor to NRDB? Now you can. Create your JSON payload and use zlib.gzip to prepare the payload body.
+  Boilerplate script that checks the size of an Object in s3 against a given value.
+  This can be expanded to verify any metadata of an s3 object and with a little work the file structure of the object etc.
+  Veryuseful in ETL pipelines.
 
 # Type of synthetic quickstart
 # - Template (Default): Full example that users can copy paste to use
 # - Snippet: Code example or building block for users to use in their own synthetic scripts
-type: Snippet
+type: Template
 
 # Type of synthetic monitor
 # Scripted Browser = SCRIPT_BROWSER
@@ -15,4 +17,5 @@ monitorType: SCRIPT_API
 
 # Optional: Authors of the quickstart
 authors:
-    - Stacy S.
+    - Adam M
+    - Steve C
