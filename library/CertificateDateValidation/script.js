@@ -15,66 +15,41 @@
  * ...
  *   "events": [
  *     {
- *       "custom.issuer": "Sectigo Limited",
- *       "custom.remainingDays": 225,
- *       "custom.url": "custom-url",
- *       "custom.validTo": "2021-10-13T23:59:59.000Z",
- *       "custom.failDaysBeforeExpiration": 30,
- *       "custom.serialNumber": "ABBDD363634353"
+ *       "custom.daysRemaining": 103,
+ *       "custom.threshold": 30
  * ...
  */
 
-const assert = require('assert')
-const request = require('request')
+const sslChecker = require('ssl-checker');
+const assert = require('assert');
 
-// EDIT: Put your custom URL here
-const url = 'https://enter-url-here'
-// EDIT: Days before your certification expires to fail the check and provide an alert
-const failDaysBeforeExpiration = 30
+// Change the port from the default 443 if needed
+const sslCheckerOptions = {
+  method: 'GET',
+  port: 443
+};
 
-const currentDate = new Date()
+// Set your domain here
+const domain = 'example.com';
+const daysUntilExpiration = 30;
+const sslTimer = $har.addResource(domain);
 
-$util.insights.set('url', url)
-console.log('Validating the certificate for ' + url)
-
-$util.insights.set('failDaysBeforeExpiration', failDaysBeforeExpiration)
-
-request({
-  url: url,
-  method: 'HEAD',
-  gzip: true,
-  followRedirect: false,
-  followAllRedirects: false
-}).on('response', (res) => {
-    // For more details about a certificate, review the object properties
-    // https://nodejs.org/api/tls.html#tls_certificate_object
-    var cert = res.req.connection.getPeerCertificate()
-    var validTo = new Date(cert.valid_to)
-
-    $util.insights.set('serialNumber', cert.serialNumber)
-    $util.insights.set('validTo', validTo)
-    console.log('This certificate ' + cert.serialNumber + ' will expire on ' + validTo)
-
-    $util.insights.set('issuer', cert.issuer.O)
-    console.log('Certificate was issued by ' + cert.issuer.O)
-
-    var remainingDays = getRemainingDays(validTo, currentDate)
-    console.log('Days left until expiration ' + remainingDays)
-    $util.insights.set('remainingDays', remainingDays)
-
-    // Subtract the failDaysBeforeExpiration from the certificate's expiration date
-    validTo.setDate(validTo.getDate() - failDaysBeforeExpiration)
-
-    if (validTo <= currentDate){
-      console.log('The certificate\'s date is not valid and should be updated.')
-    } else {
-      console.log('The certificate\'s date is valid.')
-    }
-
-     assert.ok(validTo > currentDate, "the certificate will expire in the next " + failDaysBeforeExpiration + "days.")
+async function checkCert(domain, daysUntilExpiration) {
+  try {
+    sslTimer.startTimer();
+    sslTimer.ssl().startTimer();
+    const sslCheckerResult = await sslChecker(domain, sslCheckerOptions);
+    $util.insights.set('daysRemaining', sslCheckerResult.daysRemaining);
+    $util.insights.set('threshold', daysUntilExpiration);
+    console.log('Days remaining: '+sslCheckerResult.daysRemaining+ ' Threshold: '+ daysUntilExpiration);
+    assert.ok(sslCheckerResult.daysRemaining >= daysUntilExpiration,
+      `The SSL Certificate has fewer than ${daysUntilExpiration} day(s) remaining before expiring`);
+  } catch(err){
+    throw new Error(err);
+  } finally {
+    sslTimer.ssl().endTimer();
+    sslTimer.endTimer();
   }
-)
-
-function getRemainingDays(expiration, current) {
-  return Math.floor((expiration.getTime() - current.getTime()) / (1000 * 60 * 60 * 24))
 }
+
+await checkCert(domain, daysUntilExpiration);
