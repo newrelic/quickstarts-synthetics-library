@@ -1,0 +1,20 @@
+# Name of your quickstart as shown on the website
+name: MQTT
+description: >
+  Connect to a MQTT server, subscribe to a topic, publish a message, and log out the message. 
+  Asserts could be added to validate the content of the message. 
+  Requires the use of a private location with a custom node module configuration to make the mqtt module available in the monitor.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Template
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_API
+
+# Optional: Authors of the quickstart
+authors:
+    - Brian P.
