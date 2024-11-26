@@ -1,0 +1,18 @@
+# Name of your quickstart as shown on the website
+name: Websocket
+description: >
+  Test a websocket connection using the ws module that is available in the scripted API runtime.
+
+# Type of synthetic quickstart
+# - Template (Default): Full example that users can copy paste to use
+# - Snippet: Code example or building block for users to use in their own synthetic scripts
+type: Template
+
+# Type of synthetic monitor
+# Scripted Browser = SCRIPT_BROWSER
+# Scripted API = SCRIPT_API
+monitorType: SCRIPT_API
+
+# Optional: Authors of the quickstart
+authors:
+    - Brian P.
