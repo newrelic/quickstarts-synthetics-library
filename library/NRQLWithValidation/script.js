@@ -18,8 +18,8 @@ const QUERY = `SELECT count(*) as value FROM Log where message like '%someEventI
 
 // Configure your own validation function using the query result. 
 const VALIDATION_FN = (value) => {
-    // If you don't require validation you can comment this out and do nothing here.
-    assert.ok(value!==0,`Validation failed, expecting a non zero value got: ${value}`);
+    // example validation that asserts failure if value is greater than 100
+    assert.ok(value <= 100,`Validation failed, expecting a value less than or equal to 100, got: ${value}`);
 }
 
 //No need to change anything after here! -------------------------
@@ -55,7 +55,7 @@ $http.post(API_URL,
         const value = results[0].value;
         $util.insights.set("computedValue", value);     // store derived value as custom attribute
         console.log("Computed value: ", value);         // log derived value to console
-        VALIDATION_FN(value);                           //perform custom validation
+        VALIDATION_FN(value);                           //perform custom validation (remove if unnecessary)
       } else {
         console.error(JSON.stringify(body));
         assert.fail("No single row 'value' column found in result set, check your query returns a 'value' column.");
